@@ -1,12 +1,4 @@
-/*
 
-Template 2082 Pure Mix
-
-http://www.tooplate.com/view/2082-pure-mix
-
-*/
-
-/* Body 
 ------------------------------------- */
 body {
 		background: #ffffff;
@@ -24,7 +16,12 @@ html,body {
 html {
   font-size: 100%;
 }
-
+textarea, button {
+  outline:  none;
+}
+input {
+  outline-color: rgba(206, 73, 160, 0.1);
+}
 
 /* Typography
 ------------------------------------- */
@@ -179,7 +176,18 @@ nav a {
 .menu-web {
   padding: 3px;
 }
+.menu-web a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #5f5f5f;
+}
+.menu-web a:hover {
 
+  color: #5f5f5f;
+}
+.menu-web li {
+  color: white;
+}
 .brand a {
   color: #333;
   font-size: 24px;
@@ -366,7 +374,6 @@ a.icon {
     border-color: transparent transparent transparent #fff;
   }
 }
-
 .list-menu {
   position: fixed;
   visibility: hidden;
@@ -382,13 +389,11 @@ a.icon {
   opacity: 0;
   z-index: -1;
 }
-
 .list-menu.reveal-modal {
   opacity: 1;
   z-index: 999999;
   visibility: visible;
 }
-
 .list-menu .ion-close-round {
   font-size: 31px;
   position: absolute;
@@ -408,13 +413,13 @@ a.icon {
   padding-top: 0px;
   padding-bottom: 100px;
 }
-
 #header .header-thumb {
   background: #ffffff;
-  border: 10px solid #f9f9f9;
+  box-shadow: 0px 1px 7px 1px rgba(206, 73, 160, 0.2);
   padding: 62px 20px 62px 20px;
+  border-radius: 20px;
+  height: 500px;
 }
-
 .header-one .header-thumb,
 .header-two .header-thumb,
 .header-three .header-thumb,
@@ -422,7 +427,6 @@ a.icon {
 .header-five .header-thumb {
   padding: 32px 20px 32px 20px !important;
 }
-
 .header-one, .header-two,
 .header-three, .header-four,
 .header-five {
@@ -444,7 +448,7 @@ a.icon {
   background: url('../images/header-four-bg.jpg') no-repeat;
 }
 .header-five {
-  background: url('../images/header-five-bg.jpg') no-repeat;
+  background: white;
 }
 .carousel-indicators {
   background-color: rgba(206, 73, 160, 0.7); 
@@ -466,25 +470,25 @@ a.icon {
 .jargon h1 {
   color: white;
 }
-/* Portfolio section styles
+
+/* vendor section styles
 /* ========================================== */
-#portfolio {
+#vendor {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 6rem;
 }
 
-#portfolio img {
+#vendor img {
   width: 100%;
 }
 
-#portfolio .portfolio-thumb {
+#vendor .vendor-thumb {
   position: relative;
   overflow: hidden;
   margin: 0;
 } 
-
-#portfolio .portfolio-thumb .portfolio-overlay {
+#vendor .vendor-thumb .vendor-overlay {
   background: rgba(206, 73, 160, 255);
   position: absolute;
   margin-top: 85%;
@@ -498,22 +502,19 @@ a.icon {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
-#portfolio .portfolio-thumb:hover .portfolio-overlay {
+#vendor .vendor-thumb:hover .vendor-overlay {
   opacity: 0.9;
 }
-
-#portfolio .portfolio-thumb .portfolio-overlay .portfolio-item {
+#vendor .vendor-thumb .vendor-overlay .vendor-item {
     text-align: center;
     padding: 30% 20px 20px;
 }
-#portfolio .portfolio-thumb .portfolio-overlay h3 {
+#vendor .vendor-thumb .vendor-overlay h3 {
   font-weight: bold;
   color: #f9f9f9;
   word-spacing: 0.1em;
 }
-
-#portfolio .portfolio-thumb .portfolio-overlay .fa {
+#vendor .vendor-thumb .vendor-overlay .fa {
     background: #f9f9f9;
     border-radius: 100px;
     color: #141414;
@@ -533,12 +534,10 @@ a.icon {
     margin-bottom: 32px;
     overflow: hidden;
 }
-
 .filter-wrapper li {
     display: inline-block;
     margin: 4px;
 }
-
 .filter-wrapper li a {
     color: #666;
     font-size: 13px;
@@ -549,6 +548,7 @@ a.icon {
     margin-left: 2px;
     text-transform: uppercase;
     display: block;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     transition: all 0.4s ease-in-out;
 }
@@ -565,14 +565,12 @@ a.icon {
 .iso-box-section {
     width: 100%;
 }
-
 .iso-box-wrapper {
     width: 100%;
     padding: 0;
     clear: both;
     position: relative;
 }
-
 .iso-box {
     position: relative;
     min-height: 50px;
@@ -580,17 +578,96 @@ a.icon {
     overflow: hidden;
     margin-bottom: 25px;
 }
-
 .iso-box > a {
     display: block;
     width: 100%;
     height: 100%;
     overflow: hidden;
 } 
-
 .fluid-img {
     width: 100%;
     display: block;
+}
+
+/* login page styles
+/* ========================================== */
+#header .logowp {
+  width: 150px;
+  height: 150px;
+  margin-left: 178px;
+}
+#header .detailLogin h1 {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #b4b4b4;
+  margin-top: -85px;
+  font-weight:  bolder;  
+}
+#header .form-horizontal {
+  margin-top:  -320px;
+  margin-bottom:  200px;
+}
+
+#header #inputEmail3 {
+  width: 320px; 
+  height: 50px; 
+  float: left; 
+  margin-left:  120px; 
+  margin-bottom: 10px;
+  padding-left:   20px;
+  border-radius: 5px;   
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid rgba(206, 73, 160, 0.1);
+}
+#header #inputEmail3:hover, #header #inputEmail3:active, 
+#header #inputPassword3:hover, #header #inputPassword3:active,
+#header #inputEmail3:focus #header #inputPassword3:focus 
+#header .form-control:focus .form.control:active {
+  border-color: rgba(206, 73, 160, 0.9); 
+  outline:  none;   
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 
+                    0 0 8px rgba(255,0,0,0.6);
+}
+#header input {
+  caret-color: rgba(206, 73, 160, 1) ;
+}
+#header #inputPassword3 {
+  width: 320px; 
+  height: 50px; 
+  float: left; 
+  margin-left:  120px; 
+  font-family: 'Roboto', sans-serif;
+  padding-left:   20px;
+  border-radius: 5px; 
+  border: 2px solid rgba(206, 73, 160, 0.1);
+}
+#header .checkbox {
+  float: left;
+  margin-left: 25px;
+}
+#header button {
+  float: left;
+  margin-left: 25px;
+  width: 320px;
+  color: #fdfdfd;
+  background-color: rgba(206, 73, 160, 1);
+  height: 50px; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.6pt;
+  margin-bottom: 100px;
+}
+#header button:hover, #header button:active {
+  background-color: #eee;
+  color: rgba(206, 73, 160, 1);
+  transition: all 0.4s ease-in-out;
+  border: none;
+  outline: none;
+}
+footer .developerLogin {
+  margin-top: -130px;
+  font-weight: bold;
+  color: #777;
 }
 /* footer section styles
 /* ========================================== */
@@ -655,6 +732,92 @@ footer .logo {
   width: 70px;
   height: 70px;
 }
+
+/* register member styles
+/* ========================================== */
+
+
+#header .header-thumbRegister {
+  background: #ffffff;
+  box-shadow: 0px 1px 7px 1px rgba(206, 73, 160, 0.2);
+  padding: 62px 20px 62px 20px;
+  width: 800px;
+  border-radius: 20px;
+  margin-left: -100px;
+  height: 600px;
+}
+
+#header .detailRegister {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #b4b4b4;
+  margin-top: -115px;
+  font-weight:  lighter;  
+}
+
+#header .logowpRegister {
+  width: 150px;
+  height: 150px;
+  margin-left: 294px;
+}
+
+#header .form-horizontalRegister {
+  margin-top:  -420px;
+  margin-bottom:  200px;
+}
+
+.register {
+  background: #141414;
+  padding-top: 486px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+#header #inputPassword3 {
+  width: 320px; 
+  height: 50px; 
+  float: left; 
+  margin-left:  120px; 
+  font-family: 'Roboto', sans-serif;
+  padding-left:   20px;
+  border-radius: 5px; 
+  border: 2px solid rgba(206, 73, 160, 0.1);
+}
+#header #inputdataEmail3 {
+  width: 320px; 
+  height: 50px; 
+  float: left; 
+  margin-top: 10px;
+  margin-left:  120px; 
+  font-family: 'Roboto', sans-serif;
+  padding-left:   20px;
+  border-radius: 5px; 
+  border: 2px solid rgba(206, 73, 160, 0.1);
+}
+#header #inputNoTelepon3 {
+  width: 320px; 
+  height: 50px; 
+  float: left; 
+  margin-top: 10px;
+  margin-left:  120px; 
+  font-family: 'Roboto', sans-serif;
+  padding-left:   20px;
+  border-radius: 5px; 
+  border: 2px solid rgba(206, 73, 160, 0.1);
+}
+#header #inputAlamat3 {
+  width: 320px; 
+  height: 50px; 
+  float: left; 
+  margin-top: 10px;
+  margin-left:  120px;
+  margin-bottom: 10px; 
+  font-family: 'Roboto', sans-serif;
+  padding-left:   20px;
+  border-radius: 5px; 
+  border: 2px solid rgba(206, 73, 160, 0.1);
+}
+#header #
 /* Responsive Mobile styles
 /* ========================================== */
 @media (max-width: 1024px) {
@@ -664,13 +827,24 @@ footer .logo {
   border-radius: 40px;
   margin-left: 250px;
   position: absolute;
-
+  }
+  #header .header-thumbRegister {
+      width: 300px;
   }
   .jargon h1 {
     font-size: 21px;
   }
   footer .credit, footer .nim {
     font-size: 12px;
+  }
+  #header .logowp {
+    margin-left: 130px;
+  }
+  #header #inputEmail3, #header #inputPassword3 {
+    margin-left: 65px;
+  }
+  #header .checkbox, #header button {
+    margin-left: -15px;
   }
 }
 @media (max-width: 980px) {
@@ -692,7 +866,6 @@ footer .logo {
 
 
 @media (max-width: 768px) {
-
   .brand {
     padding-left: 24px;
   }
@@ -711,12 +884,11 @@ footer .logo {
   .header-three, .header-four,
   .header-five {
     min-height: 380px;
-	padding-top: 80px !important;
+	 padding-top: 80px !important;
   }
   footer .col-md-3, footer .col-sm-3 {
     width: 25%;
   }
-  footer .social-icon {}
   #about .col-md-4,
   #single-project .col-md-3 {
     padding-bottom: 32px;
@@ -729,9 +901,7 @@ footer .logo {
     height: 50px;
     width: 45px;
   }
-
 }
-
 
 @media (max-width: 700px) {
 
@@ -742,24 +912,62 @@ footer .logo {
     font-size: 13px;
     letter-spacing: 3px;
   }
-
   .filter-wrapper {
     padding: 0px;
   }
-
   #contact {
     padding-bottom: 4rem;
   }
-
   #contact .col-md-4 {
     padding: 32px 20px 22px 62px;
   }
   .contact-submit {
 	width: 70%;
   }
-
 }
 
 @media (max-width: 450px) {
-  .intro-inner {top: 50%;}
+  .intro-inner {
+    top: 50%;
+  }
+  #header .logowp {
+    margin-left: 100px;
+  }
+  #header #inputEmail3, #header #inputPassword3 {
+    margin-left: 37.5px;
+  }
+  #header .checkbox, #header button {
+    margin-left: 40px;
+  }
+  #header .het {
+    margin-bottom:px;
+  }
+  footer .developerLogin {
+  margin-top: 140px;
+  } 
+  footer .credit, footer .nim {
+    margin-top: 60px;
+  }
+  footer .col-md-3, footer .col-sm-3 {
+    width: 100%;
+  }
+  footer .nim {
+    margin-top: 10px;
+  }
+}
+
+@media(max-width: 375px) {
+  #header #inputEmail3, #header #inputPassword3 {
+    margin-left: 20.5px;
+    width: 305px;
+  }
+  #header .logowp {
+    margin-left: 75px;
+  }
+  #header .checkbox, #header button {
+    margin-left: 20.5px;
+  }
+  #header button {
+    width: 305px;
+  }
 }
